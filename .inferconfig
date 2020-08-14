@@ -1,0 +1,55 @@
+{
+  "quandary-only": true,
+  "quandary-sources": [
+    {
+      "procedure": "javax.servlet.http.HttpServletRequest.getParameter",
+      "kind": "UserControlledString"
+    },
+    {
+      "procedure": "io.vertx.core.AsyncResult.result",
+      "kind": "Other"
+    },
+    {
+      "procedure": "java.sql.PreparedStatement.executeQuery",
+      "kind": "Other"
+    },
+    {
+      "procedure": "java.io.BufferedReader.readLine",
+      "kind": "UserControlledString"
+    },
+    {
+      "procedure": "com.jfinal.core.Controller.getRequest",
+      "kind": "UserControlledString"
+    }
+  ],
+  "quandary-sinks": [
+    {
+      "procedure": "BooksDB.add",
+      "kind": "SQLInjection"
+    },
+    {
+      "procedure": "java.io.PrintWriter.println",
+      "kind": "Logging"
+    },
+    {
+      "procedure": "java.sql.Statement.executeQuery",
+      "kind": "SQLWrite"
+    },
+    {
+      "procedure": "io.vertx.core.Handler.handle",
+      "kind": "Other"
+    },
+    {
+      "procedure": "javax.servlet.http.HttpSession.setAttribute",
+      "kind": "Other"
+    },
+    {
+      "procedure": "java.io.BufferedWriter.write",
+      "kind": "Other"
+    },
+    {
+      "procedure": "java.sql.PreparedStatement.executeUpdate",
+      "kind": "SQLInjection"
+    }
+  ]
+}
